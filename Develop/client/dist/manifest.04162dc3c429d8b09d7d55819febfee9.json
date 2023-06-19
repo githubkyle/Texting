@@ -1,0 +1,36 @@
+{
+  "icons": [
+    {
+      "src": "./client/icons/icon_512x512.3ca11a97eb7d90b61fc3db0f3c5dcdb6.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "JATE logo"
+    },
+    {
+      "src": "./client/icons/icon_192x192.1efd8d2a5218c9516adb7d6ff7907ac1.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "JATE logo"
+    },
+    {
+      "src": "./client/icons/icon_128x128.225c312e650131cfe5a2119fd958867e.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "JATE logo"
+    },
+    {
+      "src": "./client/icons/icon_96x96.97a96e0fc4eb2a8bec3b8d49d90f1d14.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "JATE logo"
+    }
+  ],
+  "name": "Texting App",
+  "short_name": "Texter",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./",
+  "description": "Keeping random notes handy",
+  "background_color": "#7eb4e2",
+  "theme_color": "#7eb4e2"
+}
