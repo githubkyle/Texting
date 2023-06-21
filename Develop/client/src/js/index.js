@@ -73,3 +73,5 @@ if ("onbeforeinstallprompt" in window) {
     installButton.style.display = "block";
   });
 }
+
+export { loadSpinner };

@@ -43,4 +43,17 @@ registerRoute(
   })
 );
 
+self.addEventListener("fetch", event => {
+  event.respondWith(
+    fetch(event.request).catch(() => {
+      return caches.match(event.request).then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+        return caches.match("/index.html");
+      });
+    })
+  );
+});
+
 registerRoute();
