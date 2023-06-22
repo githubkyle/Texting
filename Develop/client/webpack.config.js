@@ -17,6 +17,7 @@ module.exports = () => {
       filename: "[name].bundle.js",
       path: path.resolve(__dirname, "dist")
     },
+
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
@@ -24,15 +25,17 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: "./src-sw.js",
-        swDest: "service-worker.js"
+        swDest: "./src-sw.js"
       }),
       new WebpackPwaManifest({
         short_name: "Texter",
         name: "Texting App",
+        fingerprints: false,
         icons: {
           src: "./src/images/logo.png",
           type: "image/png",
           sizes: [96, 128, 192, 512],
+          fingerprints: false,
           purpose: "JATE logo",
           destination: path.join("client", "icons")
         },
@@ -42,7 +45,8 @@ module.exports = () => {
         background_color: "#7eb4e2",
         theme_color: "#7eb4e2",
         start_url: "./",
-        publicPath: "./"
+        publicPath: "./",
+        fingerprints: false
       })
     ],
 
