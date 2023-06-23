@@ -37,7 +37,8 @@ module.exports = () => {
           sizes: [96, 128, 192, 512],
           fingerprints: false,
           purpose: "JATE logo",
-          destination: path.join("client", "icons")
+          destination: path.join("assets", "icons"),
+          filename: "icon_[width]x[height].[ext]"
         },
 
         orientation: "portrait",
@@ -52,6 +53,13 @@ module.exports = () => {
 
     module: {
       rules: [
+        {
+          test: /favicon\.ico$/,
+          type: "asset/resource",
+          generator: {
+            filename: "[name].[ext]"
+          }
+        },
         {
           test: /\.css$/i,
           use: ["style-loader", "css-loader"]
